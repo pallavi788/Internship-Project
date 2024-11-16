@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        h1{
+            text-align: center;
+            font-family: sans-serif;
+            font-weight: bolder;
+        }
+        .black_background{
+            height: 500px;
+            width: 400px;
+            background-color: black;
+            margin: auto;
+            border-radius: 20px;
+            font-weight: bolder;
+        }
+        input{
+            text-align: right;
+            margin-left: 10px;
+            margin-top: 20px;
+            border-radius: 15px;
+            width: 346px;
+            padding: 20px 10px;
+            background-color: black;
+            color: white;
+            font-size: 20px;
+            border: none;
+        }
+        .first_button_row>button{
+            margin-top: 10px;
+            margin-left: 20px;
+            padding-left: 10px;
+            height: 70px;
+            width: 70px;
+            border-radius: 10px;
+            border: none;
+        }
+        .first_button_row>.button_4{
+            background-color: rgb(237,108,22);
+            color: white;
+        }
+        .second_button_row>button{
+            margin-top: 10px;
+            margin-left: 20px;
+            padding-left: 10px;
+            height: 70px;
+            width: 70px;
+            border-radius: 10px;
+            border: none;
+        }
+        .second_button_row>.button_8{
+            background-color: rgb(237,108,22);
+            color: white;
+        }
+        .third_button_row>button{
+            margin-top: 10px;
+            margin-left: 20px;
+            padding-left: 10px;
+            height: 70px;
+            width: 70px;
+            border-radius: 10px;
+            border: none;
+        }
+        .third_button_row>.button_12{
+            background-color: rgb(237,108,22);
+            color: white;
+        }
+        .fourth_button_row>button{
+            margin-top: 10px;
+            margin-left: 20px;
+            padding-left: 10px;
+            height: 70px;
+            width: 70px;
+            border-radius: 10px;
+            border: none;
+        }
+        .fourth_button_row>.button_16{
+            background-color: rgb(237,108,22);
+            color: white;
+        }
+        .fifth_button_row>button{
+            margin-top: 10px;
+            margin-left: 20px;
+            padding-left: 10px;
+            height: 70px;
+            width: 70px;
+            border-radius: 10px;
+            border: none;
+        }
+        .fifth_button_row>.button_17{
+            width: 165px;
+            border-radius: 10px;
+        }
+        .fifth_button_row>.button_19{
+            background-color: rgb(237,108,22);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>CALCULATOR</h1>
+        <div class="black_background">
+            <div>
+                <input type="text" placeholder="0" >
+            </div>
+
+            <div class="first_button_row">
+                <button class="button_1" onclick="dis()">C</button>
+                <button class="button_2" onclick="del()">Del</button>
+                <button class="button_3" onclick="num('%')">%</button>
+                <button class="button_4" onclick="num('/')">/</button>
+            </div>
+
+            <div class="second_button_row">
+                <button class="button_5" onclick="num('7')">7</button>
+                <button class="button_6" onclick="num('8')">8</button>
+                <button class="button_7" onclick="num('9')">9</button>
+                <button class="button_8" onclick="num('*')">*</button>
+            </div>
+
+            <div class="third_button_row">
+                <button class="button_9" onclick="num('4')">4</button>
+                <button class="button_10" onclick="num('5')">5</button>
+                <button class="button_11" onclick="num('6')">6</button>
+                <button class="button_12" onclick="num('-')">-</button>
+            </div>
+
+            <div class="fourth_button_row">
+                <button class="button_13" onclick="num('1')">1</button>
+                <button class="button_14" onclick="num('2')">2</button>
+                <button class="button_15" onclick="num('3')">3</button>
+                <button class="button_16" onclick="num('+')">+</button>
+            </div>
+
+            <div class="fifth_button_row">
+                <button class="button_17" onclick="num('0')">0</button>
+                <button class="button_18" onclick="num('.')">.</button>
+                <button class="button_19" onclick="result()">=</button>
+            </div>
+        </div>
+</body>
+<script>
+    let z=document.querySelector('input')
+    function num(num){
+        z.value+=num
+    }    
+    function result(){
+        z.value=eval(z.value)
+    }
+    function dis(val){
+        z.value=''
+    }
+    function del(){
+        let x=z.value;
+        let y=x.slice(0,-1);
+        z.value=y;
+    }
+</script>
+</html>
