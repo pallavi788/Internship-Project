@@ -1,11 +1,232 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        nav>.nav_bar{
+            display: flex;
+            background-color: greenyellow;
+            height: 50px;
+            line-height: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        nav>.nav_bar>p{
+            font-size: 20px;
+            margin-left: 20px;
+            font-weight: bolder;
+        }
+        nav>.nav_bar>ul{
+            position: absolute;
+            right: 20px;
+            display: flex;
+        }
+        nav>.nav_bar>ul>li{
+            list-style: none;
+            padding-left: 20px;
+        }
+        nav>.nav_bar>ul>li:hover{
+            color: darkgreen;
+            font-family: cursive;
+        }
+        .heading{
+            display: flex;
+        }
+        .heading>h1{
+            font-size: 50px;
+            color: darkgreen;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 10%;
+            margin-left: 50px;
+        }
+        .heading>img{
+            margin-left: 25%;
+            margin-top: 50px;
+            height: 50vh;
+            width: 500px;
+            border-radius: 20px;
+        }
+        button{
+            margin-left: 10%;
+            background-color: lightgreen;
+            font-size: 20px;
+            border: none;
+            width: 120px;
+            border-radius: 20px;
+            height: 40px;
+        }
+        button:hover{
+            background-color: aliceblue;
+            border: 1px solid green;
+        }
+        .Our_courses>h1{
+            margin-top: 20px;
+            font-family: sans-serif;
+            text-align: center;
+            font-size: 50px;
+        }
+        .Our_courses>.boxes{
+            font-family: sans-serif;
+            margin-top: 10%;
+            margin-left: 50px;
+            height: 40vh;
+            width: 90%;
+        }
+        .Our_courses>.boxes>div{
+            text-align: center;
+            border: 2px solid greenyellow;
+            border-radius: 20px;
+        }
+        .Our_courses>.boxes>div>p{
+            margin-top: 20px;
+            padding: 20px;
+        }
+        .Our_courses>.boxes>div:hover{
+            border: rgb(150, 138, 138);
+            background-color: lightseagreen;
+            color: white;
+        }
+        .sign_up{
+            margin-top: 35%;
+        }
+        .sign_up>h1{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 40px;
+            text-align: center;
+        }
+        .big_div{
+        margin-top: 20px;
+            display: flex;
+        }
+        .form{
+            margin-left: 40px;
+        }
+        .form>h1{
+            margin-top: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+        }
+        .form>input{
+            padding: 5px;
+            border-radius: 20px;
+            width: 300px;
+            margin-top: 15px;
+        }
+        .form>.sign{
+            background-color: green;
+            color: white;
+            cursor: pointer;
+        }
+        .Contacts{
+            margin-left: 50%;
+        }
+        .Contacts>h1{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .icon{
+            margin-left: -15px;
+        }
+        .icon>i{
+            margin-top: 20px;
+            padding-left: 10px;
+            font-size: 40px;
+        }
+        footer>div{
+            margin-top: 20px;
+            width: 100%;
+            height: 60px;
+            background-color: greenyellow;
+        }
+        footer>div>p{
+            line-height:60px ;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
 </head>
 <body>
-    
+    <nav>
+        <div class="nav_bar">
+            <p>Landing Page</p>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Sign Up</li>
+            </ul>
+        </div>
+    </nav>
+    <div class="heading">
+        <h1>Pallavi Infotech</h1>
+        <img src="./logo of landing page.jpeg" alt="">
+    </div>
+    <button>Learn More</button>
+    <div class="Our_courses">
+        <h1> Our Courses</h1>
+        <div class="boxes">
+            <div>
+                <h1>HTML</h1>
+                <p>Hyper Text Markup Language (HTML) <br>
+                    is a markup Language used to <br>
+                     structure and display content on <br>
+                     web pages.
+                    HTML is a set of codes that tell <br>
+                     web browsers how to display a page's <br>words and images.
+                </p>
+            </div>
+            <div>
+                <h1>CSS</h1>
+                <p>Cascading Style Sheet (CSS) is a <br>
+                    style sheet language used for specifying <br>
+                     the presentation and styling the <br> 
+                    of the Document writtten in a <br> markup language such as HTML or XML.
+                </p>
+            </div>
+            <div>
+                <h1>Java Script</h1>
+                    <p>JavaScript is a programming language 
+                         <br>that adds interactivity to web pages. <br>
+                        It is used to create dynamic and interactive web pages, <br>
+                        including animated graphics, content updates, <br>
+                         and more.Javascript is a key part  <br>
+                         of web development along with HTML and CSS.
+                    </p>
+            </div>
+        </div>
+    </div>
+    <div class="sign_up">
+        <h1>Sign Up</h1>
+        <div class="big_div">
+            <div class="form">
+                <h1>Your Name</h1>
+                <input type="text" placeholder="Enter Your Name">
+                <h1>Your Email</h1>
+                <input type="email" placeholder="Enter Your Mail">
+                <h1>Your Password</h1>
+                <input type="password" placeholder="Enter Your Password" > <br>
+                <input type="button" value="Sign Up" class="sign">
+            </div>
+            <div class="Contacts">
+                <h1>Contact Us</h1>
+                <div class="icon">
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-linkedin"></i>
+                    <i class="fa fa-whatsapp"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div>
+            <p>Copyright 2024 All rights reserved | This template is made with &hearts; by Pallavi Bhatt</p>
+        </div>
+    </footer>
 </body>
 </html>
